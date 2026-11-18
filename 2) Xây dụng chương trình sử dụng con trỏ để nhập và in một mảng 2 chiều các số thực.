@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int m, n, i, j;
+    float a[50][50];
+    float (*p)[50] = a;
+    printf("Nhap so hang m, so cot n: ");
+    scanf("%d%d", &m, &n);
+    for(i = 0; i < m; i++) {
+        for(j = 0; j < n; j++) {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%f", *(p + i) + j);
+        }
+    }
+    printf("Mang vua nhap la:\n");
+    for(i = 0; i < m; i++) {
+        for(j = 0; j < n; j++) {
+            printf("%.2f ", *(*(p + i) + j));
+        }
+        printf("\n");
+    }
+    return 0;
+}
