@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct SinhVien {
+    char hoTen[50];
+    char maSV[20];
+    float d1, d2, d3;
+};
+
+struct Node {
+    struct SinhVien data;
+    struct Node *next;
+};
+
+int main() {
+    return 0;
+}
